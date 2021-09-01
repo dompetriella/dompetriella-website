@@ -1,0 +1,120 @@
+:root {
+    font-size: 16px;
+
+    --a-red: #FF0505;
+    --a-black: #000000;
+    --a-yellow: #FBFB00;
+    --a-grey: #A1A1A1;
+    --a-blue: #0D00A4;
+
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    margin: 0;
+}
+
+/* this allows manipulation of the scrollbar */
+
+/* width of scrollbar */
+body::-webkit-scrollbar {
+    width: .3rem;
+}
+
+/* color behind scrollbar */
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* color of scrollbarthumb */
+body::-webkit-scrollbar-thumb {
+    background: var(--a-blue);
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    border-right: #0D00A4 double .25rem;
+    background-color: var(--a-black);
+    transition: width 200ms ease;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--a-grey);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed)
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--a-black);
+}
+
+.link-text {
+    display: none;
+    margin: 2rem;
+}
+
+.nav-link svg {
+    min-width: 2rem;
+    max-height: 2rem;
+    position: left;
+    margin: 0 1rem;
+}
+
+.navbar:hover {
+    width: 12rem;
+}
+
+.navbar:hover .link-text {
+    display: block;
+    color: var(--a-yellow);
+    
+}
+.svg-home .fa-primary {
+    color: var(--a-red);
+    transition: var(--transition-speed);
+}
+
+.svg-about .fa-primary {
+    color: var(--a-red);
+    transition: var(--transition-speed);
+}
+
+.svg-projects .fa-secondary {
+    color: var(--a-red);
+    transition: var(--transition-speed);
+}
+
+.svg-contact .fa-primary {
+    color: var(--a-red);
+    transition: var(--transition-speed);
+}
+
+
