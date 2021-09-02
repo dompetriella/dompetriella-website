@@ -39,8 +39,6 @@ main {
 }
 
 .navbar {
-    width: 5rem;
-    height: 100vh;
     position: fixed;
     border-right: #0D00A4 double .25rem;
     background-color: var(--a-black);
@@ -88,15 +86,6 @@ main {
     margin: 0 1rem;
 }
 
-.navbar:hover {
-    width: 12rem;
-}
-
-.navbar:hover .link-text {
-    display: block;
-    color: var(--a-yellow);
-    
-}
 .svg-home .fa-primary {
     color: var(--a-red);
     transition: var(--transition-speed);
@@ -117,4 +106,41 @@ main {
     transition: var(--transition-speed);
 }
 
+/* for da big screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        width: 5rem;
+        height: 100vh;
+    }
 
+    .navbar:hover .link-text {
+        display: block;
+        color: var(--a-yellow);
+        transition: opacity var(--transition-speed);
+    }
+
+    .navbar:hover {
+        width: 12rem;
+    }
+}
+
+/* for phones */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    main {
+        margin: 0;
+    }
+}
