@@ -10,10 +10,44 @@
 }
 
 body {
-    background-color: black;
-    color: white;
+    background: white;
+    color: black;
     margin: 0;
     margin: 0;
+}
+
+.home-peaks {
+    aspect-ratio: 960/450;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./svg/home-peaks.svg');
+
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.face-container {
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 /* this allows manipulation of the scrollbar */
@@ -35,7 +69,6 @@ body::-webkit-scrollbar-thumb {
 
 main {
     margin-left: 5rem;
-    padding: 1rem;
 }
 
 .navbar {
@@ -122,6 +155,10 @@ main {
     .navbar:hover {
         width: 12rem;
     }
+
+    .face-container {
+        margin-left: 5rem;
+    }
 }
 
 /* for phones */
@@ -142,5 +179,6 @@ main {
 
     main {
         margin: 0;
+        padding-top: 5rem;
     }
 }
