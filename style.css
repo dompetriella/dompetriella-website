@@ -26,7 +26,7 @@ body {
     /*for testing*/
     /*background-image: url('./svg/home-peaks.svg');*/
     /*for github */
-    background-image: ![]('./svg/home-peaks.svg');
+    background-image: url('/svg/home-peaks.svg');
 
     display: flex;
     flex-direction: column;
