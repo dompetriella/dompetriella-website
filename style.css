@@ -22,7 +22,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('./svg/home-peaks.svg');
+
+    /*for testing*/
+    /*background-image: url('./svg/home-peaks.svg');*/
+    /*for github */
+    background-image: ![Alt text]('./svg/home-peaks.svg');
 
     display: flex;
     flex-direction: column;
