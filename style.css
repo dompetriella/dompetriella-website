@@ -13,12 +13,11 @@ body {
     background: white;
     color: black;
     margin: 0;
-    margin: 0;
 }
 
 img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 75%;
+    max-height: 75%;
 }
 
 .home-peaks {
@@ -32,29 +31,26 @@ img {
 
     display: flex;
     flex-direction: column;
-}
-
-.title {
-    height: 1rem;
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-    padding: 0;
+    align-items: center;
 }
 
 .face-container {
     display: flex;
     flex-direction: row;
-    padding: 5%;
-    margin-bottom: 5em;
+    flex-wrap: wrap-reverse;
+    height: 75%;
+    width: 90%;
 }
 
 .face-home {
     display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
+    flex-direction: column;
+    flex: 1 0 480px;
+    max-width: 100%;
+    max-height: 100%;
     justify-content: center;
+    align-items: center;
+
 }
 
 /* this allows manipulation of the scrollbar */
@@ -185,13 +181,5 @@ main {
         margin: 0;
         padding-top: 5rem;
     }
-    
-    .svg-home .fa-primary {
-        color: var(--a-red);
-        transition: var(--transition-speed);
-    }
-    
-    .face-container {
-        flex-direction: column-reverse;
-    }
+
 }
