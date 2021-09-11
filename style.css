@@ -40,6 +40,7 @@ img {
     flex-wrap: wrap-reverse;
     height: 75%;
     width: 90%;
+    justify-content: center;
 }
 
 .face-home {
@@ -51,6 +52,18 @@ img {
     justify-content: center;
     align-items: center;
 
+}
+
+.face-text {
+    display:block;
+    align-items: center;
+    text-align: center;
+    color: white;
+    max-width: 80%;
+}
+
+.home-image {
+    background: radial-gradient(circle, rgba(161,161,161,1) 0%, rgba(0,0,0,1) 42%);
 }
 
 /* this allows manipulation of the scrollbar */
@@ -98,11 +111,13 @@ main {
 .nav-link {
     display: flex;
     align-items: center;
+    padding: 0;
     height: 5rem;
     color: var(--a-grey);
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
-    transition: var(--transition-speed)
+    transition: var(--transition-speed);
+
 }
 
 .nav-link:hover {
@@ -158,7 +173,6 @@ main {
     .navbar:hover {
         width: 12rem;
     }
-
 }
 
 /* for phones */
@@ -167,6 +181,7 @@ main {
         top: 0;
         width: 100vw;
         height: 5rem;
+        border-bottom:#A1A1A1 3px solid;
     }
 
     .navbar-nav {
@@ -180,6 +195,27 @@ main {
     main {
         margin: 0;
         padding-top: 5rem;
+    }
+
+    .face-container {
+        margin-top: 4rem;
+    }
+
+    #home .home-icon {
+        filter: grayscale(0%) opacity(1);
+        background: linear-gradient(0deg, rgba(251,251,0,1) 0%, rgba(0,0,0,1) 25%);
+    }
+    #about .about-icon {
+        filter: grayscale(0%) opacity(1);
+        background: linear-gradient(0deg, rgba(251,251,0,1) 0%, rgba(0,0,0,1) 25%);
+    }
+    #projects .projects-icon {
+        filter: grayscale(0%) opacity(1);
+        background: linear-gradient(0deg, rgba(251,251,0,1) 0%, rgba(0,0,0,1) 25%);
+    }
+    #contact .contact-icon {
+        filter: grayscale(0%) opacity(1);
+        background: linear-gradient(0deg, rgba(251,251,0,1) 0%, rgba(0,0,0,1) 25%);
     }
 
 }
