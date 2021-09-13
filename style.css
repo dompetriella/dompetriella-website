@@ -55,7 +55,7 @@ img {
 }
 
 .face-text {
-    display:block;
+
     align-items: center;
     text-align: center;
     color: white;
@@ -173,6 +173,10 @@ main {
     .navbar:hover {
         width: 12rem;
     }
+
+    .face-text {
+        display: flex;
+    }
 }
 
 /* for phones */
@@ -199,6 +203,10 @@ main {
 
     .face-container {
         margin-top: 4rem;
+    }
+
+    .face-text {
+        display: block;
     }
 
     #home .home-icon {
