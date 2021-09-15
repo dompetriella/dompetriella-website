@@ -20,51 +20,8 @@ img {
     max-height: 75%;
 }
 
-.home-peaks {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+/*------------------------------------------*/
 
-    background-image: url('svg/home-peaks.svg');
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.face-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    height: 75%;
-    width: 90%;
-    justify-content: center;
-}
-
-.face-home {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 480px;
-    max-width: 100%;
-    max-height: 100%;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.face-text {
-
-    align-items: center;
-    text-align: center;
-    color: white;
-    max-width: 80%;
-}
-
-.home-image {
-    background: radial-gradient(circle, rgba(161,161,161,1) 0%, rgba(0,0,0,1) 42%);
-}
 
 /* this allows manipulation of the scrollbar */
 
@@ -87,6 +44,155 @@ main {
     margin-left: 5rem;
 }
 
+
+
+
+
+
+
+/* home page css */
+/* ------------------------------------ */
+.home-peaks {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: url('svg/home-peaks.svg');
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.face-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    height: 90%;
+    width: 90%;
+    justify-content: center;
+}
+
+.face-home {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 480px;
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.face-text {
+
+    align-items: center;
+    text-align: center;
+    color: white;
+    max-width: 90%;
+}
+
+.home-image {
+    background: radial-gradient(circle, rgba(161,161,161,1) 0%, rgba(0,0,0,1) 42%);
+}
+
+
+
+/* Contact page css */
+/*----------------------------------------*/
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #000000;
+    border: solid cyan;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4rem auto 1rem;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    background: transparent;
+}
+
+.line-input {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: .6rem;
+}
+
+.line-input::after {
+    content: '';
+    background: linear-gradient(2deg, rgba(0,0,0,1) 28%, rgba(251,251,0,1) 60%);
+    height: 3px;
+    width: 100%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    transform: scale(0);
+    transform-origin: 0%;
+    transition: transform 500ms ease;
+}
+
+.line-input:focus-within::after {
+    transform: scale(1);
+}
+
+
+
+.contact-input {
+    display: flex;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    width: 100%;
+    margin: .6rem 3rem .6rem 3rem;
+    background-color: transparent;
+    border-bottom: var(--a-grey) solid 1px;
+
+}
+
+.contact-input:valid {
+    color: white;
+}
+
+.contact-input:valid .email-address-form .phone-form {
+    color: var(--a-yellow);
+}
+
+.contact-input:invalid {
+    color: var(--a-red);
+}
+
+
+
+/*----------------------------------------*/
+
+
+/* nav bar css */
+/*--------------------------------------*/
 .navbar {
     position: fixed;
     border-right: #0D00A4 double .25rem;
@@ -156,6 +262,12 @@ main {
     color: var(--a-red);
     transition: var(--transition-speed);
 }
+/*-------------------------------------------*/
+
+
+
+
+/* media queries */
 
 /* for da big screens */
 @media only screen and (min-width: 600px) {
@@ -176,6 +288,10 @@ main {
 
     .face-text {
         display: flex;
+    }
+
+    .home-image {
+        margin-bottom: 10%;
     }
 }
 
@@ -201,17 +317,14 @@ main {
         padding-top: 5rem;
     }
 
-    .face-container {
-        margin-top: 4rem;
-    }
-
     .face-text {
         display: block;
     }
 
-    #home .home-icon {
+    #home .home-icon::after {
         filter: grayscale(0%) opacity(1);
         background: linear-gradient(0deg, rgba(251,251,0,1) 0%, rgba(0,0,0,1) 25%);
+        
     }
     #about .about-icon {
         filter: grayscale(0%) opacity(1);
