@@ -98,6 +98,47 @@ main {
     background: radial-gradient(circle, rgba(161,161,161,1) 0%, rgba(0,0,0,1) 42%);
 }
 
+/* Projects Page css */
+/*----------------------------------------*/
+
+.projects-page-container {
+    display: grid;
+    background-color: var(--a-grey);
+    height: 100%;
+    max-width: 100%;
+    grid-template:
+        [row1-start] "code code code code code code eco" 1fr [row1-end]
+        [row2-start] "music music music music music music eco" 1fr [row2-end];
+    
+    gap: 1.6rem;
+    padding: 1.6rem;
+        
+}
+
+.project-box {
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.code {
+    grid-area: code;
+    background-color: var(--a-black);
+}
+
+.music {
+    grid-area: music;
+    background-color: var(--a-purple);
+}
+
+.eco {
+    grid-area: eco;
+    background-color: var(--a-green);
+}
+
+
+/*----------------------------------------*/
 
 
 /* Contact page css */
@@ -186,7 +227,19 @@ main {
     color: var(--a-red);
 }
 
+input[type=submit] {
+    margin: 1rem;
+    padding: .32rem 2rem .32rem 2rem; 
+    border:.16rem solid white;
+    -webkit-border-radius: .32rem;
+    border-radius: .32rem;
+    background-color: transparent;
+    color: white;
+}
 
+input[type=submit]:hover {
+    background-color: var(--a-blue);
+}
 
 /*----------------------------------------*/
 
@@ -317,9 +370,7 @@ main {
         padding-top: 5rem;
     }
 
-    .face-text {
-        display: block;
-    }
+
 
     #home .home-icon::after {
         filter: grayscale(0%) opacity(1);
