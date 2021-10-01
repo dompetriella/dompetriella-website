@@ -17,7 +17,7 @@ body {
     margin: 0;
 }
 
-img {
+img.contain {
     max-width: 75%;
     max-height: 75%;
 }
@@ -115,8 +115,8 @@ main {
 
 .slider {
     position: relative;
-    width: 35vh;
-    height: 30vh;
+    width: 33vh;
+    height: 28vh;
     transform-style: preserve-3d;
     animation: rotate 40s linear infinite;
 }
@@ -391,8 +391,23 @@ input[type=submit]:hover {
     transition: var(--transition-speed);
 }
 
+.svg-home .fa-secondary {
+    color: white;
+    transition: var(--transition-speed);
+}
+
 .svg-about .fa-primary {
     color: var(--a-red);
+    transition: var(--transition-speed);
+}
+
+.svg-about .fa-secondary {
+    color: white;
+    transition: var(--transition-speed);
+}
+
+.svg-projects .fa-primary {
+    color: white;
     transition: var(--transition-speed);
 }
 
@@ -403,6 +418,11 @@ input[type=submit]:hover {
 
 .svg-contact .fa-primary {
     color: var(--a-red);
+    transition: var(--transition-speed);
+}
+
+.svg-contact .fa-secondary {
+    color: white;
     transition: var(--transition-speed);
 }
 /*-------------------------------------------*/
