@@ -6,6 +6,8 @@
     --a-yellow: #FBFB00;
     --a-grey: #A1A1A1;
     --a-blue: #0D00A4;
+    --a-purple: #7F0092;
+    --a-green: #40826d;
 
 }
 
@@ -18,6 +20,10 @@ body {
 img {
     max-width: 75%;
     max-height: 75%;
+}
+
+a {
+    text-decoration: none;
 }
 
 /*------------------------------------------*/
@@ -43,9 +49,6 @@ body::-webkit-scrollbar-thumb {
 main {
     margin-left: 5rem;
 }
-
-
-
 
 
 
@@ -98,17 +101,72 @@ main {
     background: radial-gradient(circle, rgba(161,161,161,1) 0%, rgba(0,0,0,1) 42%);
 }
 
+/* About Me Page css */
+/*----------------------------------------*/
+
+.image-slide {
+    height: 30vh;
+    width: 100%;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 35vh;
+    height: 30vh;
+    transform-style: preserve-3d;
+    animation: rotate 40s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+
+.slider span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border: solid white 8px;
+    object-fit: fill;
+    transition: 2s;
+}
+
+/*----------------------------------------*/
+
 /* Projects Page css */
 /*----------------------------------------*/
 
 .projects-page-container {
     display: grid;
-    background-color: var(--a-grey);
+    background: linear-gradient(45deg, rgba(255,5,5,0.8970938717283788) 0%, rgba(127,0,146,0.7094188017003676) 8%, rgba(0,0,0,0.7906512946975666) 26%, rgba(0,0,0,1) 51%, rgba(0,0,0,0.846673703661152) 73%, rgba(13,0,164,0.9279061966583508) 95%);
     height: 100%;
     max-width: 100%;
     grid-template:
-        [row1-start] "code code code code code code eco" 1fr [row1-end]
-        [row2-start] "music music music music music music eco" 1fr [row2-end];
+        [row1-start] "code code code code code code code code eco" 1fr [row1-end]
+        [row2-start] "music music music music music music music music eco" 1fr [row2-end];
     
     gap: 1.6rem;
     padding: 1.6rem;
@@ -120,11 +178,13 @@ main {
     display: flex;
     justify-content: center;
     border-radius: 1rem;
+    border: white solid 2px;
+    padding: 0 1rem 1rem 1rem;
 }
 
 .code {
     grid-area: code;
-    background-color: var(--a-black);
+    background-color: #000000;
 }
 
 .music {
@@ -134,9 +194,34 @@ main {
 
 .eco {
     grid-area: eco;
-    background-color: var(--a-green);
+    background: linear-gradient(0deg, rgba(164,132,0,0.7766456924566701) 20%, rgba(28,215,52,0.7234244039412641) 29%, rgba(64,130,109,1) 38%);
+    display: flex;
 }
 
+
+.speech-bubble {
+    position: relative;
+    margin: .5em auto;
+    padding: 1em;
+    width: 10em; height: 4em;
+    border-radius: .25em;
+    transform: rotate(-4deg) rotateY(15deg);
+    background: #629bdd;
+    font: 2em/4 Century Gothic, Verdana, sans-serif;
+    text-align: center;
+  }
+  .speech-bubble:before, .speech-bubble:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+  }
+  .speech-bubble:after {
+    top: 0; right: 0; bottom: 0; left: 0;
+    border-radius: inherit;
+    transform: rotate(2deg) translate(.35em, -.15em) scale(1.02);
+    background: #f4fbfe;
+  }
+ 
 
 /*----------------------------------------*/
 
@@ -144,26 +229,30 @@ main {
 /* Contact page css */
 /*----------------------------------------*/
 
-.contact-page {
+.contact-page .home-peaks {
     display: flex;
     flex-direction: column;
     color: white;
     background-color: #000000;
-    border: solid cyan;
     height: 100%;
     width: 100%;
 }
 
 .header {
     display: flex;
+    color: white;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    border-bottom: #A1A1A1 dotted;
 }
 
 .contact-form-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 4rem auto 1rem;
+    margin: 2rem auto 1rem;
 }
 
 .contact-form {
@@ -248,6 +337,7 @@ input[type=submit]:hover {
 /*--------------------------------------*/
 .navbar {
     position: fixed;
+    z-index: 1;
     border-right: #0D00A4 double .25rem;
     background-color: var(--a-black);
     transition: width 200ms ease;
@@ -346,6 +436,26 @@ input[type=submit]:hover {
     .home-image {
         margin-bottom: 10%;
     }
+
+    .project-box:hover {
+        border: solid var(--a-yellow);
+    }
+
+    .image-slide {
+        height: 50vh;
+    }
+
+    .slider {
+        position: relative;
+        width: 35vh;
+        height: 30vh;
+        transform-style: preserve-3d;
+        animation: rotate 27s linear infinite;
+    }
+
+    .slider span:hover img {
+        transform: translateY(50px) scale(1.2);
+    }
 }
 
 /* for phones */
@@ -370,9 +480,7 @@ input[type=submit]:hover {
         padding-top: 5rem;
     }
 
-
-
-    #home .home-icon::after {
+    #home .home-icon {
         filter: grayscale(0%) opacity(1);
         background: linear-gradient(0deg, rgba(251,251,0,1) 0%, rgba(0,0,0,1) 25%);
         
