@@ -50,6 +50,10 @@ h2.no-margin {
     padding: 0;
 }
 
+.z-top {
+    z-index: 100;
+}
+
 
 main {
     margin-left: 5rem;
@@ -123,7 +127,8 @@ main {
     grid-template-rows: repeat(2, 1fr);
     color: var(--white);
     z-index: 3;
-    height: 100%;
+    height: inherit;
+    width: inherit;
 }
 
 .first-name {
@@ -272,71 +277,6 @@ main {
     width: 100%;
 }
 
-.code-text {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    color: var(--light-primary);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
-    font-weight: lighter;
-    height: 100%;
-    width: fit-content;
-}
-
-.atext1{
-    color: transparent;
-    animation: generateText 2s forwards;
-    animation-delay: 6s;
-}
-
-.atext2{
-    color: transparent;
-    animation: generateText 2s forwards;
-    animation-delay: 17s;
-}
-
-.atext3{
-    color: transparent;
-    animation: generateText 2s forwards;
-    animation-delay: 19s;
-}
-
-
-@keyframes generateText {
-    5% {color: var(--light-primary)}
-    to {color: var(--light-primary)}
-}
-
-.typed {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
-    width: 0;
-
-  }
-
-  .ttext1 {
-    animation: typing 4s steps(17) forwards;
-    animation-delay: 8s;
-  }
-
-  .ttext2 {
-    animation: typing 4s steps(32) forwards;
-    animation-delay: 12s;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--light-primary); }
-  }
-
 .music-ribbon {
     color: var(--white);
     background: linear-gradient(225deg, var(--light-tertiary) 10%, var(--tertiary) 100%);
@@ -344,9 +284,11 @@ main {
 }
 
 .eco-ribbon {
+    display: flex;
+    justify-content: center;
     color: var(--white);
     background: linear-gradient(45deg, var(--light-primary) 10%, var(--primary) 100%);
-    border: solid var(--light-primary) .64rem;;
+    border: solid var(--light-primary) .64rem;
 }
 
 .left-ribbon {
@@ -709,8 +651,25 @@ input[type=submit]:hover {
         transition: background-position 600ms;
     }
 
+    .code-text {
+        opacity: 0;
+        padding-left: 1rem;
+        animation: code-blink-desktop 1500ms linear infinite;
+        transition: opacity 600ms;
+    }
+
+    @keyframes code-blink-desktop {
+        0% {color: var(--primary)}
+        50% {color: var(--light-primary)}
+        100% {color: var(--primary)}
+    }
+
     .code-ribbon:hover {
         background-position: right;
+    }
+
+    .code-text:hover {
+        opacity: 1;
     }
 
 }
@@ -773,8 +732,68 @@ input[type=submit]:hover {
     }
 
     .code-text {
+        color: transparent;
         font-family: 'Courier New', Courier, monospace;
         font-size: .75rem;
+        animation: code-blink 25s linear infinite;
+        overflow: hidden;
+    }
+    
+    @keyframes code-blink {
+        0% {
+            color: transparent;
+        }
+        16% {
+            color: transparent;
+        }
+        17% {
+            color: var(--light-primary);
+        }
+        25% {
+            color: var(--primary);
+        }
+        30% {
+            color: var(--light-primary);
+        }
+        35% {
+            color: var(--primary);
+        }
+        40% {
+            color: var(--light-primary);
+        }
+        45% {
+            color: var(--primary);
+        }
+        50% {
+            color: var(--light-primary);
+        }
+        55% {
+            color: var(--primary);
+        }
+        60% {
+            color: var(--light-primary);
+        }
+        65% {
+            color: var(--primary);
+        }
+        70% {
+            color: var(--light-primary);
+        }
+        75% {
+            color: var(--primary);
+        }
+        80% {
+            color: var(--light-primary);
+        }
+        83% {
+            color: var(--primary);
+        }
+        87% {
+            color: transparent;
+        }
+        100% {
+            color: transparent;
+        }
     }
 
     #home .home-icon {
@@ -796,3 +815,4 @@ input[type=submit]:hover {
     }
 
 }
+
