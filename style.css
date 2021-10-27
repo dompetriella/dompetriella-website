@@ -282,9 +282,134 @@ main {
 }
 
 .music-ribbon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: var(--white);
-    background: linear-gradient(225deg, var(--light-tertiary) 10%, var(--tertiary) 100%);
+    background: linear-gradient(45deg, rgba(31,117,254,1) 0%, rgba(64,224,208,1) 81%);
+    background-position: center;
+    background-size: 300%;
     border: solid var(--light-tertiary) .64rem;
+}
+
+.equalizer-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-bottom: solid transparent 0.5rem;
+    background-color: transparent;
+    background-position: center;
+    justify-content: center;
+    padding-top: 2rem;
+    animation: music-lights 1500ms infinite;
+}
+
+@keyframes music-lights {
+    0% {background-position: left;}
+    50% {background-position: right;}
+    100% {background-position: left;}
+}
+
+.equal-bar {
+    align-self: flex-end;
+    width: 1.5rem;
+    height: 0%;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    border-top: transparent solid .25rem;
+    border-left: transparent solid .1rem;
+    background: transparent;
+}
+
+.e1 {
+    animation: equalizer-high 1s infinite ease-in-out;
+}
+
+.e2 {
+    animation: equalizer-high 1s infinite ease-in-out;
+    animation-delay: 80ms;
+}
+
+.e3 {
+    animation: equalizer-high 1s infinite ;
+    animation-delay: 300ms;
+}
+
+.e4 {
+    animation: equalizer 1s infinite;
+    animation-delay: 450ms;
+}
+
+.e5 {
+    animation: equalizer 1s infinite;
+    animation-delay: 250ms;
+}
+
+.e6 {
+    animation: equalizer 1s infinite;
+    animation-delay: 400ms;
+}
+
+.e7 {
+    animation: equalizer-low 1s infinite;
+    animation-delay: 300ms;
+}
+
+.e8 {
+    animation: equalizer-low 1s infinite;
+    animation-delay: 600ms;
+}
+
+.e9 {
+    animation: equalizer-low 1s infinite;
+    animation-delay: 800ms;
+}
+
+.e10 {
+    animation: equalizer-low 1s infinite;
+    animation-delay: 400ms;
+}
+
+@keyframes equalizer-high {
+    0% {height: 40%}
+    25% {height: 100%}
+    33% {height: 75%}
+    50% {height: 100%}
+    77% {height: 65%}
+    100% {height: 50%}
+}
+
+@keyframes equalizer {
+    0% {height: 30%}
+    25% {height: 80%}
+    33% {height: 50%}
+    50% {height: 80%}
+    77% {height: 40%}
+    100% {height: 20%}
+}
+
+@keyframes equalizer-low {
+    0% {height: 0%}
+    25% {height: 50%}
+    33% {height: 25%}
+    50% {height: 40%}
+    77% {height: 10%}
+    100% {height: 5%}
+}
+
+.music-ribbon:hover > .equalizer-container {
+    border-bottom: solid var(--white) 0.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(45deg, rgba(167,244,50,1) 0%, rgba(31,117,254,0) 50%, rgba(255,191,0,1) 99%);
+    background-position: left;
+    background-size: 300%;
+    transform: scaleY(1);
+}
+
+.music-ribbon:hover > div .equal-bar {
+    border-top: var(--white) solid .25rem;
+    border-left: var(--white) solid .1rem;
+    background: linear-gradient(333deg, var(--light-primary) 0%, var(--light-secondary) 88%);
 }
 
 .eco-ribbon {
@@ -298,11 +423,10 @@ main {
 .eco-container {
     display: flex;
     justify-content: center;
-
     height: calc(100% + 0.5rem);
     width: calc(100% + 0.5rem);
     background: linear-gradient(10deg, rgba(31,117,254,1) 8%, rgba(64,224,208,1) 36%, rgba(255,191,0,1) 49%, rgba(204,85,0,1) 53%, rgba(50,41,47,1) 71%);
-    background-size: 350%;
+    background-size: 400%;
     animation: eco-sunset 30s infinite ease-in-out;
 }
 
@@ -677,14 +801,14 @@ input[type=submit]:hover {
     }
 
     .code-ribbon {
-        transition: background-position 600ms;
+        transition: background-position 1s;
     }
 
     .code-text {
         opacity: 0;
         padding-left: 1rem;
         animation: code-blink-desktop 1500ms linear infinite;
-        transition: opacity 600ms;
+        transition: opacity 1s;
     }
 
     @keyframes code-blink-desktop {
@@ -699,6 +823,12 @@ input[type=submit]:hover {
 
     .code-text:hover {
         opacity: 1;
+    }
+
+    .equalizer-container {
+        transition: transform 1s ease;
+        transform: scaleY(0);
+        transform-origin: 0%;
     }
 
 }
@@ -772,10 +902,10 @@ input[type=submit]:hover {
         0% {
             color: transparent;
         }
-        16% {
+        14% {
             color: transparent;
         }
-        17% {
+        16% {
             color: var(--light-primary);
         }
         25% {
@@ -825,6 +955,84 @@ input[type=submit]:hover {
         }
     }
 
+  
+    @keyframes swipe-right {
+        0% {
+            background-position: right;
+        }
+    
+        10% {
+            background-position: right;
+        }
+    
+        15% {
+            background-position: left;
+        }
+
+        43% {
+            z-index: 1;
+        }
+    
+        80% {
+            z-index: 1;
+        }
+
+        85% {
+            background-position: left;
+
+        }
+    
+        90% {
+            background-position: right;
+        }
+    
+        100% {
+            background-position: right;
+        }
+    }
+
+    .equalizer-container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        border-bottom: solid var(--white) 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        background: linear-gradient(90deg, rgba(167,244,50,1) 0%, rgba(255,191,0,0) 30%, rgba(239,194,17,0) 70%, rgba(255,191,0,1) 97%);
+        background-position: center;
+        background-size: 200%;
+        justify-content: center;
+        padding-top: 2rem;
+        animation: music-lights 1s infinite;
+        z-index: -1;
+    }
+    
+    @keyframes music-lights {
+        0% {background-position: left;}
+        50% {background-position: right;}
+        100% {background-position: left;}
+    }
+    
+    .music-ribbon {
+        background: linear-gradient(45deg, rgba(255,191,0,0) 49%, rgba(31,117,254,1) 50%, rgba(64,224,208,1) 97%);
+        background-position: right;
+        background-size: 300%;
+        animation: swipe-right 25s infinite;
+        animation-delay: 5s;
+    }
+
+
+    .equal-bar {
+        align-self: flex-end;
+        width: 1rem;
+        height: 0%;
+        margin-left: .25rem;
+        margin-right: .25rem;
+        border-top: var(--white) solid .25rem;
+        border-left: var(--white) solid .1rem;
+        background: linear-gradient(333deg, var(--light-primary) 0%, var(--light-secondary) 88%);
+    }
+
     #home .home-icon {
         filter: grayscale(0%) opacity(1);
         background: linear-gradient(0deg, var(--light-secondary) 0%, var(--bg) 25%);
@@ -844,4 +1052,3 @@ input[type=submit]:hover {
     }
 
 }
-
