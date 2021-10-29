@@ -51,24 +51,27 @@
 
 		<div class="contact-form-container">
 			<form method="POST">
-				<div class="contact-form line-input name-form">
+				<div class="line-input name-form">
 					<input name="name-form" type="text" class="contact-input" placeholder="Your Name" required>
+					<div class="valid-bottle">LOOKS GOOD</div>
 				</div>
 	
-				<div class="contact-form line-input email-address-form">
-					<input name="email-address-form" type="email" class="contact-input" placeholder="Your Email" required>
+				<div class="line-input email-address-form">
+					<div class="valid-bottle-right">EMAIL @ 100%</div>
+					<input name="email-address-form" type="email" class="contact-input email-input" placeholder="Your Email" required>
 				</div>
 	
-				<div class="contact-form line-input phone-form">
+				<div class="line-input phone-form">
 					<input name="phone-form" type="tel" class="contact-input" class="contact-input" placeholder="Phone" required>
+					<div class="valid-bottle">GOT YOUR #</div>
 				</div>
 	
-				<div class="contact-form message-form">
-					<textarea name="message-form" class="contact-input" placeholder="Write your message here" rows="5" required></textarea>
+				<div class="message-form">
+					<textarea name="message-form" class="message-input" placeholder="Write your message here" rows="5" required></textarea>
 				</div>
 	
-				<div class="contact-form submit-button">
-					<input type="submit" class="submit-button" value="SEND" onclick="sendEmail()">
+				<div class="submit-button">
+					<input type="submit" class="sub-button" value="SEND" onclick="sendEmail()">
 				</div>
 			</form>
 
