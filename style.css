@@ -567,41 +567,50 @@ main {
     width: 100%;
     color: white;
     border: 0.3rem solid var(--white);
-    border-right: 0rem;
-    background-color: var(--bg);
     margin-right: 0.16rem;
     border-radius: .5rem;
+    background: transparent;
+    background-position: right;
+    background-size: 250%;
+    transition: background-position 2100ms ease-out 750ms;
+    text-align: center;
 }
 
 .valid-bottle {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: transparent;
+    background: transparent;
     flex-wrap: wrap;
-    color: white;
     font-weight: bold;
-    width: 75%;
-    border: var(--light-secondary) solid 0.15rem;
+    width: 50%;
+    border: transparent solid 0.15rem;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+    padding: 0.25rem;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 2s ease 750ms, color 200ms linear 2s;
 }
 
-.valid-bottle-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact-input:focus-within {
+    background: linear-gradient(90deg, var(--light-primary) 0%, var(--primary) 45%, var(--secondary) 55%, var(--light-secondary) 100%);
+    background-position: right;
+    background-size: 250%;
+}
+
+.contact-input:valid {
+    background: linear-gradient(90deg, var(--light-primary) 0%, var(--primary) 45%, var(--secondary) 55%, var(--light-secondary) 100%);
+    background-size: 250%;
+    background-position: left;
+    border-right: transparent;
+}
+
+.contact-input:valid ~ .valid-bottle {
+    transform: scaleY(1);
     color: white;
-    font-weight: bold;
-    width: 75%;
-    border: var(--light-secondary) solid 2px;
-    border-bottom-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-}
-
-.email-input {
-    border: 0.3rem solid var(--white);
-    border-left: 0rem;
-    padding-right: 0.5rem;
+    background: linear-gradient(0deg, var(--secondary) 25%, var(--light-secondary) 70%);
 }
 
 .message-form {
@@ -615,6 +624,7 @@ main {
     width: 90%;
     height: 100%;
     color: white;
+    font-size: 1rem;
     border: 0.5rem solid var(--white);
     background-color: var(--bg);
     border-radius: .5rem;
@@ -634,6 +644,7 @@ main {
     border-radius: 0.5rem;
     padding: 1rem 3rem 1rem 3rem;
 }
+
 /*----------------------------------------*/
 
 
@@ -882,6 +893,33 @@ main {
         transform-origin: 0%;
     }
 
+    .line-input {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .contact-input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: white;
+        border: 0.3rem solid var(--white);
+        margin-right: 0.16rem;
+        border-radius: .5rem;
+        font-size: 2rem;
+    }
+    
+    .valid-bottle {
+        width: 25%;
+    }
+
+    .message-input {
+        font-size: 1.5rem;
+    }
+
+    .sub-button:hover {
+        background-color: var(--primary);
+    }
 }
 
 /* for phones */
@@ -1156,6 +1194,9 @@ main {
         }
     }
 
+    .sub-button {
+        background-color: var(--primary);
+    }
 
     #home .home-icon {
         filter: grayscale(0%) opacity(1);
