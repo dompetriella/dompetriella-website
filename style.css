@@ -559,6 +559,53 @@ main {
 .sub-projects-code {
     background: linear-gradient(90deg, var(--bg) 10%, var(--secondary) 100%);
 }
+
+.code-projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.code-projects-item-area {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    padding-bottom: 5vh;
+    gap: 10vw;
+}
+
+.image-icon {
+    max-height: fit-content;
+    max-width: fit-content;
+    height: 50px;
+    width: 50px;
+}
+
+.code-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 1rem;
+    text-decoration: none; 
+    color: var(--black);
+}
+
+.primary-secondary-background {
+    color: var(--white);
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%); 
+}
+
+.secondary-tertiary-background {
+    color: var(--white);
+    background: linear-gradient(45deg, var(--secondary) 0%, var(--tertiary) 100%); 
+}
  
 
 /*----------------------------------------*/
@@ -667,7 +714,6 @@ main {
 .navbar {
     position: fixed;
     z-index: 999;
-    border-right: var(--white) double .50rem;
     background-color: var(--bg);
     transition: width 200ms ease;
     width: 100vw;
@@ -767,6 +813,7 @@ main {
     .navbar {
         width: 5rem;
         height: 100vh;
+        border-right: var(--white) double .50rem;
     }
 
     .navbar:hover .link-text {
