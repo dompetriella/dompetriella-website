@@ -80,8 +80,10 @@ main {
 .home-image {
     grid-column: 4 / span 5;
     grid-row: 3 / span 8;
-    margin-left: 20%;
+    margin-left: 5vw;
     z-index: 3;
+    box-shadow: 0px 2px 1px rgba(0,0,0,.5);
+    border-radius: 50%;
 }
 
 .primary-ribbon {
@@ -168,6 +170,11 @@ main {
     flex-wrap: wrap;
     padding: 0 1rem 1rem;
     margin: 0;
+}
+
+.message-container {
+    height: 1000px;
+    width: 100vw;
 }
 
 /* About Me Page css */
@@ -578,10 +585,8 @@ main {
 }
 
 .image-icon {
-    max-height: fit-content;
-    max-width: fit-content;
-    height: 50px;
-    width: 50px;
+    max-height: 4vh;
+    max-width: 4vh;
 }
 
 .code-item {
@@ -595,6 +600,7 @@ main {
     border-radius: 1rem;
     text-decoration: none; 
     color: var(--black);
+    border: solid white 0.32rem;
 }
 
 .primary-secondary-background {
@@ -607,6 +613,30 @@ main {
     background: linear-gradient(45deg, var(--secondary) 0%, var(--tertiary) 100%); 
 }
  
+
+/*----------------------------------------*/
+
+/* Code */
+.sub-projects-music {
+    background: linear-gradient(90deg, var(--bg) 10%, var(--tertiary) 100%);
+}
+
+.music-projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.music-projects-item-area {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    padding-bottom: 5vh;
+    gap: 10vw;
+}
 
 /*----------------------------------------*/
 
