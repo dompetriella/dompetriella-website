@@ -59,6 +59,15 @@ main {
     margin-left: 5rem;
 }
 
+.bio {
+    color: var(--white);
+    margin: 1rem;
+    padding: .5rem;
+    text-align: center;
+    border: var(--tertiary) double;
+    border-radius: 1rem;
+}
+
 
 
 
@@ -115,6 +124,9 @@ main {
 
 .secondary-ribbon {
     color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(214deg, rgba(204,85,0,1) 42%, rgba(255,191,0,1) 100%);
     border-bottom: solid var(--light-secondary) .16rem;
     border-right: solid var(--light-secondary) 1rem;
@@ -141,7 +153,7 @@ main {
     grid-column: 1 / span 7;
     grid-row: 1;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 15vh;
 }
 
 .last-name {
@@ -152,7 +164,7 @@ main {
     grid-column: 3 / span 7;
     grid-row: 2;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 15vh;
 }
 
 .job-title {
@@ -170,11 +182,6 @@ main {
     flex-wrap: wrap;
     padding: 0 1rem 1rem;
     margin: 0;
-}
-
-.message-container {
-    height: 1000px;
-    width: 100vw;
 }
 
 /* About Me Page css */
@@ -567,13 +574,27 @@ main {
     background: linear-gradient(90deg, var(--bg) 10%, var(--secondary) 100%);
 }
 
+.code-projects-container-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
 .code-projects-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: 1rem;
+    border: solid var(--white) 0.5rem;
+    background: linear-gradient(30deg, var(--white) 25%, var(--light-tertiary) 100%);
 }
+
 
 .code-projects-item-area {
     display: flex;
@@ -582,6 +603,10 @@ main {
     height: 10vh;
     padding-bottom: 5vh;
     gap: 10vw;
+}
+
+.tertiary-color {
+    font-size: 2rem;
 }
 
 .image-icon {
@@ -595,12 +620,11 @@ main {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: 75%;
     background-color: var(--white);
     border-radius: 1rem;
     text-decoration: none; 
     color: var(--black);
-    border: solid white 0.32rem;
 }
 
 .primary-secondary-background {
@@ -616,17 +640,23 @@ main {
 
 /*----------------------------------------*/
 
-/* Code */
+/* Music */
 .sub-projects-music {
     background: linear-gradient(90deg, var(--bg) 10%, var(--tertiary) 100%);
+    margin-bottom: 5vh;
 }
 
 .music-projects-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: 1rem;
+    border: solid var(--white) 0.5rem;
+    background: linear-gradient(30deg, var(--bg) 55%, var(--light-secondary) 100%);
 }
 
 .music-projects-item-area {
@@ -636,6 +666,65 @@ main {
     height: 10vh;
     padding-bottom: 5vh;
     gap: 10vw;
+}
+
+.free-food-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    text-align: center;
+    color: white;
+    background-color: var(--bg);
+    width: 16rem;
+    height: 6rem;
+    border-radius: 5px;
+}
+
+.music-projects-bio {
+    color: var(--white);
+    margin: 1rem;
+    padding: .5rem;
+    text-align: center;
+    border: var(--tertiary) double;
+    border-radius: 1rem;
+}
+
+/* Ecology */
+
+.sub-projects-eco {
+    background: linear-gradient(90deg, var(--bg) 10%, var(--primary) 100%);
+}
+
+.eco-projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: 1rem;
+    border: solid var(--white) 0.5rem;
+    background: linear-gradient(30deg, var(--bg) 55%, var(--tertiary) 100%);
+}
+
+.eco-projects-item-area {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    padding-bottom: 5vh;
+    gap: 10vw;
+}
+
+.eco-projects-bio {
+    color: var(--white);
+    margin: 1rem;
+    padding: .5rem;
+    text-align: center;
+    border: var(--tertiary) double;
+    border-radius: 1rem;
 }
 
 /*----------------------------------------*/
@@ -902,6 +991,7 @@ main {
     .last-name {
         font-size: 7rem;
         align-self: flex-end;
+        padding-left: 2rem;
         padding-right: 2rem;
     }
 
