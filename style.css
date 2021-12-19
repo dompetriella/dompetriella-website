@@ -93,6 +93,8 @@ main {
     z-index: 3;
     box-shadow: 0px 2px 1px rgba(0,0,0,.5);
     border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .primary-ribbon {
@@ -199,10 +201,10 @@ main {
 
 .slider {
     position: relative;
-    width: 25vh;
+    width: 18vh;
     height: 20vh;
     transform-style: preserve-3d;
-    animation: rotate 40s linear infinite;
+    animation: rotate 60s linear infinite;
 }
 
 @keyframes rotate {
@@ -733,6 +735,10 @@ main {
 /* Contact page css */
 /*----------------------------------------*/
 
+.contact-main {
+    background: linear-gradient(201deg, rgba(50,41,47,1) 28%, rgba(31,117,254,1) 100%);
+    height: 100vh;
+}
 
 .header {
     color: var(--white);
@@ -777,8 +783,8 @@ main {
     background: linear-gradient(90deg, var(--light-primary) 0%, var(--primary) 45%, var(--secondary) 55%, var(--light-secondary) 100%);
     background-position: right;
     background-size: 250%;
-    border-top: solid 0.3rem var(--light-tertiary);
-    border-left: solid 0.3rem var(--tertiary);
+    border-top: solid 0.3rem var(--light-secondary);
+    border-left: solid 0.3rem var(--secondary);
 }
 
 .contact-input:valid {
@@ -786,6 +792,8 @@ main {
     background-size: 250%;
     background-position: left;
     border-right: transparent;
+    border-top: solid 0.3rem var(--light-primary);
+    border-left: solid 0.3rem var(--primary);
 }
 
 .message-form {
@@ -801,13 +809,13 @@ main {
     color: white;
     font-size: 1rem;
     border: 0.5rem solid var(--white);
-    background-color: var(--bg);
+    background-color: transparent;
     border-radius: .5rem;
 }
 
 .message-input:focus-within {
-    border-right: solid 0.5rem var(--light-tertiary);
-    border-bottom: solid 0.5rem var(--tertiary);
+    border-right: solid 0.5rem var(--light-secondary);
+    border-bottom: solid 0.5rem var(--secondary);
 }
 
 .submit-button {
@@ -951,7 +959,11 @@ main {
 
     .home-image {
         grid-column: 8 / span 4;
-        grid-row: 2 / span 7;
+        grid-row: 1 / span 10;
+        height: 55vh;
+        width: 45vh;
+        min-width: 45vh;
+        max-width: 45vh;
         margin: 0;
     }
 
@@ -1022,7 +1034,7 @@ main {
         width: 35vh;
         height: 30vh;
         transform-style: preserve-3d;
-        animation: rotate 40s linear infinite;
+        animation: rotate 60s linear infinite;
     }
 
     .slider span {
