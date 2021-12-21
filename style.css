@@ -1053,17 +1053,19 @@ main {
         width: 0
     }
 
-    .message-input {
+    .message-input .main-page {
         border: none;
         height: 0;
+        opacity: 0;
     }
 
-    .message-form {
+    .message-form .main-page {
         height: 0;
-
+        opacity: 0;
     }
 
-    .line-input {
+    .line-input .main-page {
+        opacity: 0;
         border: none;
         height: 0;
         margin: 0;
@@ -1071,18 +1073,26 @@ main {
         opacity: 0;
     }
 
-    .email-input {
+    .email-input .main-page {
+        opacity: 0;
         height: 0;
         margin: 0;
         padding: 0;
         border: none;
     }
 
-    .sub-button {
+    .submit-button .main-page {
+        height: 0;
+        opacity: 0;
+    }
+
+    .sub-button .main-page {
+        opacity: 0;
         color: transparent;
         border: none;
         height: 0;
         width: 0;
+        padding: 0;
     }
 
 
