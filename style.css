@@ -13,10 +13,11 @@
     --light-tertiary: #40E0D0;
 
     --black: #32292F;
+    --grey: #EAF2EF;
     --green: #386C0B;
     --orange: #CC5500;
     --blue: #1f75fe;
-    --l-blue: #40E0D0;
+    --l-blue: #40E0D0; 
     --l-green: #a7f432;
     --yellow: #FFBF00;
     --white: #F7F7FF;
@@ -1023,9 +1024,68 @@ main {
         font-size: 1.6rem;
     }
 
+    .after-main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .message-container {
+        height: 0;
+    }
+
     .message-area {
         height: 0;
     }
+
+    .message-left {
+        font-size: 0;
+    }
+
+    .message-right {
+        font-size: 0;
+    }
+
+
+    /* VERY UGLY deletion of contact lol */
+
+    .main-page {
+        height: 0;
+        width: 0
+    }
+
+    .message-input {
+        border: none;
+        height: 0;
+    }
+
+    .message-form {
+        height: 0;
+
+    }
+
+    .line-input {
+        border: none;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+    }
+
+    .email-input {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    .sub-button {
+        color: transparent;
+        border: none;
+        height: 0;
+        width: 0;
+    }
+
+
 
     .project-box:hover {
         border: solid var(--light-secondary);
@@ -1142,9 +1202,70 @@ main {
     }
 
     .image-ribbon {
-        background: radial-gradient(circle, rgba(64,224,208,1) 0%, rgba(31,117,254,1) 20%, rgba(50,41,47,1) 51%);
+        background: radial-gradient(circle, #40e0d0 0%, rgba(31,117,254,1) 20%, rgba(50,41,47,1) 51%);
         background-position-x: 10vw;
     }
+
+    .message-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: min-content;
+        width: 100vw;
+        border-radius: 1rem;
+        padding-top: 1rem;
+    }
+
+    .message-area {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 90vw;
+        background: linear-gradient(297deg, var(--light-tertiary) 0%, var(--white) 100%);
+        border-radius: 1rem;
+        padding: 0.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .message-left {
+        color: var(--white);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: left;
+        box-shadow: -2px 2px 5px var(--bg);
+        background: linear-gradient(233deg, var(--tertiary) 0%, var(--light-tertiary) 100%);
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        min-height: 1rem;
+        width: 65%;
+        border-radius: 1rem;
+        text-decoration: none;
+        user-select: none;
+    }
+
+    .message-right {
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: var(--white);
+        text-align: left;
+        background: linear-gradient(130deg, var(--primary) 0%, var(--light-primary) 100%);
+        box-shadow: -2px 2px 5px var(--bg);
+        padding: 1rem;
+        margin-top: 1rem;
+        min-height: 1rem;
+        max-width: 65%;
+        border-radius: 1rem;
+        align-self: end;
+        text-decoration: none;
+        user-select: none;
+    }
+
+    .secondary-text-message {
+        background: linear-gradient(130deg, var(--secondary) 0%, var(--light-secondary) 100%);
+    }
+
+
+
 
     @keyframes code-blackboard {
         0% {
