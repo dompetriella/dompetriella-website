@@ -1045,56 +1045,10 @@ main {
         font-size: 0;
     }
 
-
-    /* VERY UGLY deletion of contact lol */
-
-    .main-page {
+    .contact-form-container-main {
+        display: none;
         height: 0;
-        width: 0
     }
-
-    .message-input .main-page {
-        border: none;
-        height: 0;
-        opacity: 0;
-    }
-
-    .message-form .main-page {
-        height: 0;
-        opacity: 0;
-    }
-
-    .line-input .main-page {
-        opacity: 0;
-        border: none;
-        height: 0;
-        margin: 0;
-        padding: 0;
-        opacity: 0;
-    }
-
-    .email-input .main-page {
-        opacity: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
-        border: none;
-    }
-
-    .submit-button .main-page {
-        height: 0;
-        opacity: 0;
-    }
-
-    .sub-button .main-page {
-        opacity: 0;
-        color: transparent;
-        border: none;
-        height: 0;
-        width: 0;
-        padding: 0;
-    }
-
 
 
     .project-box:hover {
@@ -1522,6 +1476,13 @@ main {
         100% {
             background-position: left;
         }
+    }
+
+    .contact-form-container-main {
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+        width: 100%;
     }
 
     .sub-button {
