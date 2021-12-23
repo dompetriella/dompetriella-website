@@ -1,0 +1,236 @@
+:root {
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    --bg: #32292F;
+    --primary: #386C0B;
+    --primary-hi: hsl(92, 82%, 38%);
+    --secondary: #CC5500;
+    --secondary-hi: hsl(25, 100%, 55%);
+    --tertiary: #1f75fe;
+    --light-primary: #a7f432;
+    --light-secondary: #FFBF00;
+    --light-tertiary: #40E0D0;
+
+    --black: #32292F;
+    --grey: #EAF2EF;
+    --green: #386C0B;
+    --orange: #CC5500;
+    --blue: #1f75fe;
+    --l-blue: #40E0D0; 
+    --l-green: #a7f432;
+    --yellow: #FFBF00;
+    --white: #F7F7FF;
+
+    --primary-ribbon-height: span 4;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+}
+
+img.fit {
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 100;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1.no-margin {
+    margin: 0;
+    padding: 0;
+}
+
+h2.no-margin {
+    margin: 0;
+    padding: 0;
+}
+
+.z-top {
+    z-index: 100;
+}
+
+.sub-projects-title {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+}
+
+
+.back-to-projects {
+    display: inline-block;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    height: 2rem;
+    border-top: solid var(--tertiary) .8rem;
+    border-left: solid var(--light-tertiary) .5rem;
+    border-radius: 50%;
+    color: var(--white);
+}
+
+main {
+    margin-left: 5rem;
+}
+
+/* nav bar css */
+/*--------------------------------------*/
+.navbar {
+    position: fixed;
+    z-index: 999;
+    background-color: var(--bg);
+    transition: width 200ms ease;
+    width: 100vw;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 5rem;
+    color: var(--a-grey);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.3);
+    transition: var(--transition-speed);
+
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg);
+}
+
+.link-text {
+    display: none;
+    margin: 2rem;
+}
+
+.nav-link svg {
+    min-width: 2rem;
+    max-height: 2rem;
+    position: left;
+    margin: 0 1rem;
+}
+
+.svg-home .fa-primary {
+    color: var(--secondary);
+    transition: var(--transition-speed);
+}
+
+.svg-home .fa-secondary {
+    color: var(--white);
+    transition: var(--transition-speed);
+}
+
+.svg-about .fa-primary {
+    color: var(--secondary);
+    transition: var(--transition-speed);
+}
+
+.svg-about .fa-secondary {
+    color: var(--white);
+    transition: var(--transition-speed);
+}
+
+.svg-projects .fa-primary {
+    color: var(--white);
+    transition: var(--transition-speed);
+}
+
+.svg-projects .fa-secondary {
+    color: var(--secondary);
+    transition: var(--transition-speed);
+}
+
+.svg-contact .fa-primary {
+    color: var(--secondary);
+    transition: var(--transition-speed);
+}
+
+.svg-contact .fa-secondary {
+    color: var(--white);
+    transition: var(--transition-speed);
+}
+
+/* for desktop */
+@media only screen and (min-width: 600px) {
+
+    .navbar {
+        width: 5rem;
+        height: 100vh;
+        border-right: var(--white) double .50rem;
+    }
+
+    .navbar:hover .link-text {
+        display: block;
+        color: var(--light-primary);
+        transition: opacity var(--transition-speed);
+    }
+
+    .navbar:hover {
+        width: 12rem;
+    }
+}
+
+
+
+/* for phones */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 100vw;
+        height: 5rem;
+        border-bottom: var(--white) 3px solid;
+    }
+
+    .navbar-nav {        
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    main {
+        margin: 0;
+        padding-top: 5rem;
+    }
+
+    #home .home-icon {
+        filter: grayscale(0%) opacity(1);
+        background: linear-gradient(0deg, var(--light-secondary) 0%, var(--bg) 25%);
+        
+    }
+    #about .about-icon {
+        filter: grayscale(0%) opacity(1);
+        background: linear-gradient(0deg, var(--light-secondary) 0%, var(--bg) 25%);
+    }
+    #projects .projects-icon {
+        filter: grayscale(0%) opacity(1);
+        background: linear-gradient(0deg, var(--light-secondary) 0%, var(--bg) 25%);
+    }
+    #contact .contact-icon {
+        filter: grayscale(0%) opacity(1);
+        background: linear-gradient(0deg, var(--light-secondary) 0%, var(--bg) 25%);
+    }
+
+}

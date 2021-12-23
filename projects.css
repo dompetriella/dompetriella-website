@@ -1,0 +1,582 @@
+/* Projects Page css */
+/*----------------------------------------*/
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    width: 100%;
+    height: 100vh;
+    margin-top: .5rem;
+}
+
+.code-ribbon {
+    color: var(--white);
+    background: linear-gradient(108deg, rgba(255,191,0,1) 0%, rgba(204,85,0,1) 32%, rgba(50,41,47,1) 48%);
+    background-size: 300%;
+    border: solid var(--light-secondary) .64rem;
+}
+
+.code-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-left: 1rem;
+}
+
+.code-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.code-text {
+    overflow: hidden;
+}
+
+.music-ribbon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    background: linear-gradient(45deg, rgba(31,117,254,1) 0%, rgba(64,224,208,1) 81%);
+    background-position: center;
+    background-size: 300%;
+    border: solid var(--light-tertiary) .64rem;
+}
+
+.equalizer-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-bottom: solid transparent 0.5rem;
+    background-color: transparent;
+    background-position: center;
+    justify-content: center;
+    padding-top: 2rem;
+    animation: music-lights 1500ms infinite;
+}
+
+@keyframes music-lights {
+    0% {background-position: left;}
+    50% {background-position: right;}
+    100% {background-position: left;}
+}
+
+.equal-bar {
+    align-self: flex-end;
+    width: 1.5rem;
+    height: 0%;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    border-top: transparent solid .25rem;
+    border-left: transparent solid .1rem;
+    background: transparent;
+}
+
+.e1 {
+    animation: equalizer-high 1s infinite ease-in-out;
+}
+
+.e2 {
+    animation: equalizer-high 1s infinite ease-in-out;
+    animation-delay: 80ms;
+}
+
+.e3 {
+    animation: equalizer-high 1s infinite ;
+    animation-delay: 300ms;
+}
+
+.e4 {
+    animation: equalizer 1s infinite;
+    animation-delay: 450ms;
+}
+
+.e5 {
+    animation: equalizer 1s infinite;
+    animation-delay: 250ms;
+}
+
+.e6 {
+    animation: equalizer 1s infinite;
+    animation-delay: 400ms;
+}
+
+.e7 {
+    animation: equalizer-low 1s infinite;
+    animation-delay: 300ms;
+}
+
+.e8 {
+    animation: equalizer-low 1s infinite;
+    animation-delay: 600ms;
+}
+
+.e9 {
+    animation: equalizer-low 1s infinite;
+    animation-delay: 800ms;
+}
+
+.e10 {
+    animation: equalizer-low 1s infinite;
+    animation-delay: 400ms;
+}
+
+@keyframes equalizer-high {
+    0% {height: 40%}
+    25% {height: 100%}
+    33% {height: 75%}
+    50% {height: 100%}
+    77% {height: 65%}
+    100% {height: 50%}
+}
+
+@keyframes equalizer {
+    0% {height: 30%}
+    25% {height: 80%}
+    33% {height: 50%}
+    50% {height: 80%}
+    77% {height: 40%}
+    100% {height: 20%}
+}
+
+@keyframes equalizer-low {
+    0% {height: 0%}
+    25% {height: 50%}
+    33% {height: 25%}
+    50% {height: 40%}
+    77% {height: 10%}
+    100% {height: 5%}
+}
+
+.music-ribbon:hover > .equalizer-container {
+    border-bottom: solid var(--white) 0.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(45deg, rgba(167,244,50,1) 0%, rgba(31,117,254,0) 50%, rgba(255,191,0,1) 99%);
+    background-position: left;
+    background-size: 300%;
+    transform: scaleY(1);
+}
+
+.music-ribbon:hover > div .equal-bar {
+    border-top: var(--white) solid .25rem;
+    border-left: var(--white) solid .1rem;
+    background: linear-gradient(333deg, var(--light-primary) 0%, var(--light-secondary) 88%);
+}
+
+.eco-ribbon {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    font-weight: bold;
+    padding: 0rem .5rem .5rem .5rem;
+    height: 25vh;
+    width: 50vw;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border: var(--light-primary) 1rem solid;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-width: 1rem 1rem 1rem 0rem;
+
+    color: var(--white);
+    background: linear-gradient(45deg, var(--light-primary) 10%, var(--primary) 100%);
+}
+
+.eco-container {
+    opacity: 0;
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 5;
+    height: calc(100% + 0.5rem);
+    width: calc(100% + 0.5rem);
+    background: linear-gradient(10deg, rgba(31,117,254,1) 8%, rgba(64,224,208,1) 36%, rgba(255,191,0,1) 49%, rgba(204,85,0,1) 53%, rgba(50,41,47,1) 71%);
+    background-size: 475%;
+    transition: opacity 1s;
+    animation: eco-sunset 15s infinite ease-in-out;
+}
+
+.eco-title {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    background-color: transparent;
+    justify-self: center;
+    z-index: 1;
+}
+
+.eco-image {
+    width: 50vw;
+    height: calc(25vh + 0.5rem);
+    animation: fade-plant 15s infinite ease-in;
+    transition: transform 1500ms ease;
+    transform-origin: bottom;
+
+}
+
+.eco-container:hover {
+    opacity: 1;
+}
+
+@keyframes fade-plant {
+    0% {
+        filter: grayscale(0%);
+        }
+    50% {
+        filter: grayscale(100%);
+        }
+    65% {
+        filter: grayscale(100%);
+        }
+    100% {
+        filter: grayscale(0%);
+        }
+}
+
+@keyframes eco-sunset {
+    0% {
+        background-position: left;
+    }
+    15% {
+        background-position: left;
+    }
+    50% {
+        background-position: right;
+    }
+    75% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}
+
+.left-ribbon {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 0rem .5rem .5rem .5rem;
+    height: 20vh;
+    width: 70vw;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-width: 1rem 1rem 1rem 0rem;
+}
+
+.right-ribbon {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-self: end;
+    padding: 0rem .5rem .5rem .5rem;
+    height: 20vh;
+    width: 70vw;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-width: 1rem 0rem 1rem 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .projects-container {
+        margin: 0;
+    }
+
+    .left-ribbon {
+        height: 25vh;
+        width: 50vw;
+    }
+
+    .right-ribbon {
+        height: 25vh;
+        width: 50vw;
+    }
+
+    .code-ribbon {
+        transition: background-position 1s;
+    }
+
+    .code-text {
+        opacity: 0;
+        padding-left: 1rem;
+        animation: code-blink-desktop 1500ms linear infinite;
+        transition: opacity 1s;
+    }
+
+    @keyframes code-blink-desktop {
+        0% {color: var(--primary)}
+        50% {color: var(--light-primary)}
+        100% {color: var(--primary)}
+    }
+
+    .code-ribbon:hover {
+        background-position: right;
+    }
+
+    .code-text:hover {
+        opacity: 1;
+    }
+
+    .equalizer-container {
+        transition: transform 1s ease;
+        transform: scaleY(0);
+        transform-origin: 0%;
+    }
+
+}
+
+/* for phones */
+@media only screen and (max-width: 600px) {
+
+    @keyframes code-blackboard {
+        0% {
+            background-position: left;
+        }
+    
+        5% {
+            background-position: right;
+        }
+    
+        85% {
+            background-position: right;
+        }
+    
+        90% {
+            background-position: left;
+        }
+    
+        100% {
+            background-position: left;
+        }
+    }
+
+    .code-ribbon {
+    animation: code-blackboard 25s infinite;
+    }
+
+    .code-text {
+        color: transparent;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: .75rem;
+        animation: code-blink 25s linear infinite;
+        overflow: hidden;
+    }
+    
+    @keyframes code-blink {
+        0% {
+            color: transparent;
+        }
+        3% {
+            color: transparent;
+        }
+        7% {
+            color: var(--light-primary);
+        }
+        15% {
+            color: var(--primary);
+        }
+        20% {
+            color: var(--light-primary);
+        }
+        25% {
+            color: var(--primary);
+        }
+        30% {
+            color: var(--light-primary);
+        }
+        35% {
+            color: var(--primary);
+        }
+        40% {
+            color: var(--light-primary);
+        }
+        45% {
+            color: var(--primary);
+        }
+        50% {
+            color: var(--light-primary);
+        }
+        55% {
+            color: var(--primary);
+        }
+        60% {
+            color: var(--light-primary);
+        }
+        65% {
+            color: var(--primary);
+        }
+        70% {
+            color: var(--light-primary);
+        }
+        75% {
+            color: var(--primary);
+        }
+        80% {
+            color: var(--light-primary);
+        }
+        83% {
+            color: var(--primary);
+        }
+        87% {
+            color: transparent;
+        }
+        100% {
+            color: transparent;
+        }
+    }
+
+  
+    @keyframes swipe-right {
+        0% {
+            background-position: right;
+        }
+    
+        5% {
+            background-position: right;
+        }
+    
+        10% {
+            background-position: left;
+        }
+
+        25% {
+            z-index: 1;
+        }
+    
+        80% {
+            z-index: 1;
+        }
+
+        85% {
+            background-position: left;
+
+        }
+    
+        90% {
+            background-position: right;
+        }
+    
+        100% {
+            background-position: right;
+        }
+    }
+
+    .equalizer-container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        border-bottom: solid var(--white) 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        background: linear-gradient(90deg, rgba(167,244,50,1) 0%, rgba(255,191,0,0) 30%, rgba(239,194,17,0) 70%, rgba(255,191,0,1) 97%);
+        background-position: center;
+        background-size: 200%;
+        justify-content: center;
+        padding-top: 2rem;
+        animation: music-lights 1s infinite;
+        z-index: -1;
+    }
+    
+    @keyframes music-lights {
+        0% {background-position: left;}
+        50% {background-position: right;}
+        100% {background-position: left;}
+    }
+    
+    .music-ribbon {
+        background: linear-gradient(45deg, rgba(255,191,0,0) 49%, rgba(31,117,254,1) 50%, rgba(64,224,208,1) 97%);
+        background-position: right;
+        background-size: 300%;
+        animation: swipe-right 25s infinite;
+        animation-delay: 5s;
+    }
+
+
+    .equal-bar {
+        align-self: flex-end;
+        width: 1rem;
+        height: 0%;
+        margin-left: .25rem;
+        margin-right: .25rem;
+        border-top: var(--white) solid .25rem;
+        border-left: var(--white) solid .1rem;
+        background: linear-gradient(333deg, var(--light-primary) 0%, var(--light-secondary) 88%);
+    }
+
+
+    .eco-ribbon {
+        height: 20vh;
+        width: calc(70vw + 0.5rem);
+        background: linear-gradient(45deg, var(--light-primary) 10%, var(--primary) 100%);
+        padding-left: 0;
+        animation: eco-ribbon 40s infinite;
+    }
+
+    .eco-container {
+        opacity: 0;
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 5;
+        height: calc(100% + 0.5rem);
+        width: calc(100% + 0.5rem);
+        background: linear-gradient(10deg, rgba(31,117,254,1) 8%, rgba(64,224,208,1) 36%, rgba(255,191,0,1) 49%, rgba(204,85,0,1) 53%, rgba(50,41,47,1) 71%);
+        background-size: 475%;
+        animation: eco-sunset 30s infinite ease-in-out;
+        animation-delay: 10s;
+        z-index: -1;
+    }
+    
+    .eco-title {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+        background-color: transparent;
+        justify-self: center;
+        z-index: 1;
+    }
+    
+    .eco-image {
+        width: 70vw;
+        height: calc(20vh + 0.5rem);
+        animation: fade-plant 30s infinite ease-in;
+        animation-delay: 10s;
+    
+    }
+
+    @keyframes eco-ribbon {
+        20% {
+            z-index: 1;
+        }
+
+        100% {
+            z-index: 0;
+        }
+    }
+
+    @keyframes eco-sunset {
+        0% {
+            background-position: left;
+            opacity: 0;
+        }
+        15% {
+            background-position: left;
+        }
+
+        20% {
+            opacity: 1;
+        }
+        50% {
+            background-position: right;
+        }
+        75% {
+            background-position: right;
+            opacity: 0;
+        }
+        100% {
+            background-position: left;
+        }
+    }
+
+}

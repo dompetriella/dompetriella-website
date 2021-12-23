@@ -1,0 +1,68 @@
+
+/* Code */
+.sub-projects-code {
+    background: linear-gradient(90deg, var(--bg) 10%, var(--secondary) 100%);
+}
+
+.code-projects-container-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.code-projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: 1rem;
+    border: solid var(--white) 0.5rem;
+    background: linear-gradient(30deg, var(--white) 25%, var(--light-tertiary) 100%);
+}
+
+
+.code-projects-item-area {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    padding-bottom: 5vh;
+    gap: 10vw;
+}
+
+.tertiary-color {
+    font-size: 2rem;
+}
+
+.image-icon {
+    max-height: 4vh;
+    max-width: 4vh;
+}
+
+.code-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 75%;
+    background-color: var(--white);
+    border-radius: 1rem;
+    text-decoration: none; 
+    color: var(--black);
+}
+
+.maritime-mines {
+    color: var(--white);
+    background: linear-gradient(45deg, var(--tertiary) 0%, var(--light-tertiary) 100%); 
+}
+
+.secondary-tertiary-background {
+    color: var(--white);
+    background: linear-gradient(45deg, var(--secondary) 0%, var(--tertiary) 100%); 
+}
