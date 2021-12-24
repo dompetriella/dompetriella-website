@@ -276,13 +276,13 @@
     }
 
     .first-name {
-        font-size: 7rem;
+        font-size: 13vh;
         align-self: flex-start;
         padding-left: 2rem;
     }
 
     .last-name {
-        font-size: 7rem;
+        font-size: 13vh;
         align-self: flex-end;
         padding-left: 2rem;
         padding-right: 2rem;
