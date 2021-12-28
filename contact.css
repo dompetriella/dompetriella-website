@@ -4,7 +4,6 @@
 
 .contact-main {
     background: linear-gradient(140deg, rgba(50,41,47,1) 28%, rgba(31,117,254,1) 100%);
-    height: 100vh;
 }
 
 .header {
@@ -17,11 +16,44 @@
     margin-bottom: 1rem;
 }
 
+.contact-content {
+    display: flex;
+}
+
 .contact-form-container {
     display: flex;
     flex-direction: column;
-    height: 70vh;
     width: 100%;
+}
+
+.resume-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.contact-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.resume {
+    background: linear-gradient(135deg, rgba(56,108,11,1) 0%, rgba(167,244,50,0) 100%);
+    color: var(--white);
+    border-left: var(--light-primary) solid 0.5rem;
+    border-top: var(--primary) solid 0.5rem;
+}
+
+.cv {
+    background: linear-gradient(315deg, rgba(204,85,0,1) 0%, rgba(255,191,0,0) 100%);
+    color: var(--white);
+    border-right: var(--light-secondary) solid 0.5rem;
+    border-bottom: var(--secondary) solid 0.5rem;
 }
 
 .line-input {
@@ -66,7 +98,7 @@
 .message-form {
     display: flex;
     justify-content: center;
-    height: 60%;
+    height: 15rem;
     width: 100%;
 }
 
@@ -103,10 +135,30 @@
 /*for desktop */
 @media only screen and (min-width: 600px) {
 
-    .line-input {
-        padding-left: 5rem;
-        padding-right: 5rem;
+    .contact-main {
+        height: 100vh;
     }
+
+    .resume-area {
+        width: 50vw;
+        padding: 5rem;
+    }
+
+    .contact-link {
+        height: 10rem;
+        width: 30vw;
+    }
+
+    .contact-link:hover {
+        box-shadow: 0 0 10px var(--white);
+    }
+    
+
+    .line-input {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
     .contact-input {
         display: flex;
         align-items: center;
@@ -132,11 +184,28 @@
 /* for phones */
 @media only screen and (max-width: 600px) {
 
-    .contact-form-container-main {
+    .contact-form-container {
         display: flex;
         flex-direction: column;
-        height: 70vh;
         width: 100%;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-area {
+        border-radius: 0.5rem;
+        
+        height: 40vh;
+        width: 90vw;
+    }
+
+    .contact-link {
+        height: 6rem;
+        width: 75vw;
+        border-radius: 1rem;
     }
 
     .sub-button {
