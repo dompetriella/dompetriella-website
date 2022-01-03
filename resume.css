@@ -1,0 +1,268 @@
+:root {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    --bg: #F7F7FF;
+    --dark-mode-bg: #32292F;
+    --profile-bg: #386C0B;
+    --dark-mode-profile: #CC5500;
+    --info-bg: #F7F7FF;
+    --profile-color: #F7F7FF;
+    --info-color: #32292F;
+    --page-shadow: #32292F;
+    --highlight: #40E0D0;
+    --dark-mode-highlight: #1f75fe;
+
+}
+
+
+.fa-primary {
+    color: var(--profile-bg);
+}
+
+.fa-secondary {
+    color: var(--bg);
+}
+
+img {
+    height: 12rem;
+    min-width: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+}
+
+svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+html, body {
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100vw;
+}
+
+b {
+    color: var(--highlight);
+}
+
+/*.menu {
+    height: 10vh;
+    background: lightblue;
+}*/
+
+main {
+    display: flex;
+}
+
+
+/* profile side */
+
+.profile-container {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    color: var(--profile-color);
+    height: auto;
+    min-width: 20rem;
+    width: 20rem;
+    background-color: var(--profile-bg);
+    text-align: center;
+}
+
+.profile-picture {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-name {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+
+}
+
+.profile-job {
+    color: var(--highlight);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.profile-title-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 2.5rem;
+    padding-top: 0.5rem;
+}
+
+.profile-title-text {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    text-align: left;
+    width: 75%;
+    border-bottom: double 0.25rem var(--profile-color);
+}
+
+.profile-profile {
+    text-align: justify;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.contact-item-container {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.contact-text-text {
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.skills {
+    padding: 2rem 0 1rem 0;
+}
+
+.skills-secondary {
+    color: var(--highlight);
+}
+
+.skill-title {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.skill-bar-container {
+    height: 1.2rem;
+    border: solid 3px var(--bg);
+    border-radius: 5px;
+    margin: .25rem 0 .25rem 0;
+}
+
+.fill {
+    background: var(--highlight);
+    height: 1rem;
+}
+
+.css {
+    width: 98%;
+}
+
+.js {
+    width: 86%;
+}
+
+.c {
+    width: 91%;
+}
+
+.node {
+    width: 84%;
+}
+
+.git {
+    width: 92%;
+}
+
+/* info side */
+
+ul {
+    margin: 0;
+}
+
+.info-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    background: var(--profile-bg);
+}
+
+.info-container {
+    padding: 1rem;
+    color: var(--info-color);
+    height: auto;
+    min-width: 30rem;
+    width: 30rem;
+    background: var(--info-bg);
+}
+
+.info-title-container {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    padding: 1.5rem 0 1rem 0;
+}
+
+.info-title-text {
+    font-weight: bolder;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+    width: 80%;
+    border-bottom: double 0.25rem var(--info-color);
+    text-transform: capitalize;
+}
+
+.subtitle-heading-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+}
+
+.subtitle-heading-date {
+    font-size: 1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--profile-bg);
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.subtitle-heading-title {
+    font-size: 1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--profile-bg);
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.subtitle-heading-subtitle {
+    font-style: italic;
+    padding: 0rem 0rem 0.5rem 0.5rem;
+}
+
+.subtitle-list-text {
+    font-size: 0.9rem;
+    width: 80%;
+}
+
+.cap {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+/* for tablet */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* for desktop */
+@media only screen and (min-width: 600px) {
+    main {
+        display: flex;
+        width: 53rem; 
+        margin: 5vh 25vw 5vh 25vw;
+        box-shadow: 0 0 5px 5px var(--page-shadow);
+    }
+}

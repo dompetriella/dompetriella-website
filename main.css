@@ -78,6 +78,13 @@ main {
     margin-left: 5rem;
 }
 
+.intext-link {
+    border-radius: 3px;
+    color: var(--white);
+    height: 2rem;
+    color: var(--white);
+}
+
 /* nav bar css */
 /*--------------------------------------*/
 .navbar {
@@ -174,6 +181,13 @@ main {
 /* for desktop */
 @media only screen and (min-width: 600px) {
 
+    .intext-link:hover {
+        border-radius: 3px;
+        color: var(--white);
+        height: 2rem;
+        box-shadow: 0 0 8px 2px var(--white);
+    }
+
     .navbar {
         width: 5rem;
         height: 100vh;
@@ -213,6 +227,12 @@ main {
     main {
         margin: 0;
         padding-top: 5rem;
+    }
+
+    .intext-link {
+        border-radius: 3px;
+        height: 2rem;
+        box-shadow: 0 0 8px 2px var(--white);
     }
 
     #home .home-icon {

@@ -61,6 +61,15 @@
     justify-content: center;
 }
 
+.about-me-message {
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--white);
+}
+
 .about-me-container {
     color: var(--white);
     margin: 1rem;
@@ -70,9 +79,14 @@
     border-radius: 1rem;
 }
 
-/* for deskotp */
-@media only screen and (min-width: 600px) {
+.about-me-text {
+    padding: 0.5rem;
+    text-align: justify;
+}
 
+
+/* for desktop */
+@media only screen and (min-width: 600px) {
 
     .project-box:hover {
         border: solid var(--light-secondary);
@@ -98,7 +112,6 @@
 
 /* for phones */
 @media only screen and (max-width: 600px) {
-
 
     #home .home-icon {
         filter: grayscale(0%) opacity(1);

@@ -1,4 +1,10 @@
 /* Ecology */
+img {
+    display: flex;
+    align-self: center;
+    width: 65%;
+    height: 65%;
+}
 
 .sub-projects-eco {
     background: linear-gradient(90deg, var(--bg) 10%, var(--primary) 100%);
@@ -13,24 +19,23 @@
     margin-right: 2vw;
     margin-left: 2vw;
     border-radius: 1rem;
-    border: solid var(--white) 0.5rem;
-    background: linear-gradient(30deg, var(--bg) 55%, var(--light-primary) 100%);
+    border: solid var(--light-primary) 0.5rem;
+    background: linear-gradient(30deg, var(--white) 55%, var(--light-primary) 100%);
 }
 
 .eco-projects-item-area {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: var(--white);
+    color: var(--bg);
     font-size: 2.4rem;
     text-align: center;
     height: 10vh;
-    padding-bottom: 5vh;
     gap: 10vw;
 }
 
 .eco-projects-bio {
-    color: var(--white);
+    color: var(--bg);
     margin: 1rem;
     padding: .5rem;
     text-align: center;
