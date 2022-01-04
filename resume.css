@@ -111,7 +111,7 @@ main {
 
 .profile-profile {
     text-align: justify;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1.5rem 1rem 1rem;
 }
 
 .contact-item-container {
@@ -162,6 +162,10 @@ main {
     width: 91%;
 }
 
+.php {
+    width: 78%;
+}
+
 .node {
     width: 84%;
 }
@@ -199,7 +203,7 @@ ul {
     display: flex;
     align-items: center;
     height: 2.5rem;
-    padding: 1.5rem 0 1rem 0;
+    padding: 1.2rem 0 1rem 0;
 }
 
 .info-title-text {
@@ -254,7 +258,13 @@ ul {
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 53rem; 
+    }
 }
 
 /* for desktop */
