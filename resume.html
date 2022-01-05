@@ -7,8 +7,9 @@
     <link href="resume.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="menu"></div>
+
     <main>
+
         <div class="profile-container">
 
             <div class="mobile-grid">
@@ -64,7 +65,7 @@
     
                     <div class="contact-item-container">
                         <div class="svg-image">
-                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marked-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-map-marked-alt fa-w-18 fa-7x"><path fill="currentColor" d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z" class=""></path></svg>    
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marked-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-map-marked-alt fa-w-18 fa-7x"><path fill="currentColor" d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z" class="fa-secondary"></path></svg>    
                         </div>
                         <div class="contact-text-container">
                             <div class="contact-text-text">1306 Ford Ave NE</div>
@@ -255,7 +256,45 @@
 
             </div>
         </div>    
+
+        
     </main>
+
+
+    <div class="night-mode-container">
+        <div class="night-mode">
+            <div id="night-mode-switch" class="night-mode-switch">
+                <div class="switch-button" id="switch-button" onclick="nightModeToggle()"></div>
+            </div>
+            <div class="night-mode-text" id="night-mode-text">Light Mode</div>
+        </div>
+
+    </div>
+
+    <a href="dl-files/resume-dark.pdf" download="dompetriella-resume-dark.pdf" class="download-button-container dark-resume" id="download-button-dark">
+        <div class="download-button">
+            <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-download fa-w-16 fa-7x">
+                <g class="fa-group">
+                    <path fill="currentColor" d="M320 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3a19.37 19.37 0 0 1-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24a23.94 23.94 0 0 1 24-24h80a23.94 23.94 0 0 1 24 24z" class="download-arrow"></path>
+                    <path fill="currentColor" d="M488 352H341.3l-49 49a51.24 51.24 0 0 1-72.6 0l-49-49H24a23.94 23.94 0 0 0-24 24v112a23.94 23.94 0 0 0 24 24h464a23.94 23.94 0 0 0 24-24V376a23.94 23.94 0 0 0-24-24zm-120 96a16 16 0 1 1 16-16 16 16 0 0 1-16 16zm64 0a16 16 0 1 1 16-16 16 16 0 0 1-16 16z" class="fa-primary"></path>
+                </g>
+            </svg>
+            <div class="download-button-text">Download PDF</div>
+        </div>
+    </a>
+
+    <a href="dl-files/resume-light.pdf" download="dompetriella-resume-light.pdf" class="download-button-container" id="download-button-light">
+        <div class="download-button">
+            <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-download fa-w-16 fa-7x">
+                <g class="fa-group">
+                    <path fill="currentColor" d="M320 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3a19.37 19.37 0 0 1-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24a23.94 23.94 0 0 1 24-24h80a23.94 23.94 0 0 1 24 24z" class="download-arrow"></path>
+                    <path fill="currentColor" d="M488 352H341.3l-49 49a51.24 51.24 0 0 1-72.6 0l-49-49H24a23.94 23.94 0 0 0-24 24v112a23.94 23.94 0 0 0 24 24h464a23.94 23.94 0 0 0 24-24V376a23.94 23.94 0 0 0-24-24zm-120 96a16 16 0 1 1 16-16 16 16 0 0 1-16 16zm64 0a16 16 0 1 1 16-16 16 16 0 0 1-16 16z" class="fa-primary"></path>
+                </g>
+            </svg>
+            <div class="download-button-text">Download PDF</div>
+        </div>
+    </a>
+
     <script src="script.js"></script>
   </body>
 </html>

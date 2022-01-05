@@ -9,9 +9,7 @@
     --info-bg: #F7F7FF;
     --profile-color: #F7F7FF;
     --info-color: #32292F;
-    --page-shadow: #32292F;
-    --highlight: #40E0D0;
-    --dark-mode-highlight: #1f75fe;
+    --highlight: #CC5500;
 
 }
 
@@ -44,6 +42,8 @@ html, body {
     width: 100vw;
 }
 
+
+
 b {
     color: var(--highlight);
 }
@@ -56,7 +56,6 @@ b {
 main {
     display: flex;
 }
-
 
 /* profile side */
 
@@ -265,6 +264,14 @@ ul {
         align-items: flex-start;
         width: 53rem; 
     }
+
+    .night-mode-container {
+        display: none;
+    }
+    
+    .download-button-container {
+        display: none;
+    }
 }
 
 /* for desktop */
@@ -273,7 +280,105 @@ ul {
         display: flex;
         width: 53rem; 
         margin: 5vh 25vw 5vh 25vw;
-        box-shadow: 0 0 5px 5px var(--page-shadow);
+        box-shadow: 0 0 5px 5px var(--info-color);
+    }
+
+    .night-mode-container {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20%;
+        left: 77%;
+        height: 5rem;
+        width: 12rem;
+        border-radius: 1rem;
+        border: solid 0.5rem var(--info-color);
+        background: var(--info-bg);
+        text-decoration: none;
+        user-select: none;
+
+    }
+
+    .night-mode {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%;
+    }
+
+    .night-mode-switch {
+        display: flex;
+        align-items: center;
+        padding: 0 0.2rem;
+        height: 60%;
+        width: 50%;
+        border-radius: 1.5rem;
+        background: var(--info-color);
+        cursor: pointer;
+    }
+
+    .night-mode-text {
+        color: var(--info-color);
+    }
+
+    .switch-button {
+        margin-left: 0%;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: var(--info-bg);
+        border-radius: 100%;
+        transition: margin-left 500ms;
+    }
+
+    .download-button-container {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 35%;
+        left: 77%;
+        height: 5rem;
+        width: 12rem;
+        border-radius: 1rem;
+        border: solid 0.5rem var(--info-color);
+        background: var(--info-bg);
+        text-decoration: none;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .download-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .download-button-text {
+        color: var(--info-color)
+    }
+
+    .download-arrow {
+        color: var(--highlight);
+    }
+
+    .back-button-container {
+        position: fixed;
+        top: 35%;
+        left: 77%;
+        height: 3rem;
+        width: 10rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        background: red;
+    }
+
+    .back-button {
+
     }
 }
 
