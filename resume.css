@@ -45,13 +45,12 @@ b {
     color: var(--highlight);
 }
 
-/*.menu {
-    height: 10vh;
-    background: lightblue;
-}*/
-
 main {
     display: flex;
+}
+
+.navbar {
+    display: none;
 }
 
 /* profile side */
@@ -393,7 +392,7 @@ ul {
 
 }
 
-/* for desktop */
+/* for mobile */
 @media only screen and (max-width: 768px) {
 
     main {
@@ -402,10 +401,24 @@ ul {
         width: auto;
     }
 
+    .navbar {
+        display: block;
+    }
+
+    .home-icon {
+        display: flex;
+        flex-direction: column;
+    }
+
     .profile-container {
         display: flex;
         flex-direction: column;
         width: auto;
+    }
+
+    .resume {
+        display: flex;
+        flex-direction: column;
     }
 
     .mobile-row1 {
@@ -455,4 +468,16 @@ ul {
         width: auto;
         min-width: 0;
     }
+
+    .night-mode-container {
+        display: none;
+    }   
+
+    .download-button-container {
+        display: none;
+    }   
+
+    .back-button {
+        display: none;
+    }   
 }
