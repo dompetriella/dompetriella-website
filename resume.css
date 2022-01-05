@@ -3,14 +3,11 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     --bg: #F7F7FF;
-    --dark-mode-bg: #32292F;
     --profile-bg: #386C0B;
-    --dark-mode-profile: #CC5500;
     --info-bg: #F7F7FF;
     --profile-color: #F7F7FF;
     --info-color: #32292F;
     --highlight: #CC5500;
-
 }
 
 
@@ -283,6 +280,34 @@ ul {
         box-shadow: 0 0 5px 5px var(--info-color);
     }
 
+    .back-button {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: fixed;
+        color: var(--info-bg);
+        top: 5%;
+        left: 10%;
+        height: 5rem;
+        width: 12rem;
+        border-radius: 1rem;
+        border: solid 0.5rem var(--info-color);
+        background: var(--info-bg);
+        text-decoration: none;
+        user-select: none;
+        cursor: pointer;
+        background: var(--profile-bg);
+    }
+
+    .arrow-point {
+        color: var(--info-color);
+    }
+
+    .arrow-line {
+        color: var(--highlight);
+    }
+
     .night-mode-container {
         display: flex;
         align-items: center;
@@ -366,20 +391,6 @@ ul {
         color: var(--highlight);
     }
 
-    .back-button-container {
-        position: fixed;
-        top: 35%;
-        left: 77%;
-        height: 3rem;
-        width: 10rem;
-        padding: 1rem 2rem;
-        border-radius: 1rem;
-        background: red;
-    }
-
-    .back-button {
-
-    }
 }
 
 /* for desktop */
