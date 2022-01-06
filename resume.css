@@ -405,11 +405,27 @@ ul {
         display: block;
     }
 
+    .nav-link {
+        filter: none;
+    }
+
+    .nav-primary {
+        color: var(--info-color);
+    }
+
+    .navbar-text {
+        color: var(--info-color)
+    }
+
     .home-icon {
         display: flex;
         flex-direction: column;
+        box-shadow: 0 0 0 1px var(--info-color);
     }
 
+    .night-mode-icon {
+        height: 2rem;
+    }
     .profile-container {
         display: flex;
         flex-direction: column;
