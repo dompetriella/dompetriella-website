@@ -31,7 +31,7 @@ function darkMode() {
     root.style.setProperty('--info-color','#F7F7FF')
     root.style.setProperty('--highlight','#386C0B')
     document.getElementById('download-button-dark').style.zIndex = "999"
-    document.getElementById('night-mode-icon').setAttribute('src','svg/moon.svg')
+    document.getElementById('night-mode-icon').setAttribute('src','../svg/moon.svg')
 }
 
 function lightMode() {
@@ -43,17 +43,17 @@ function lightMode() {
     root.style.setProperty('--info-color','#32292F')
     root.style.setProperty('--highlight','#CC5500')
     document.getElementById('download-button-dark').style.zIndex = "-1"
-    document.getElementById('night-mode-icon').setAttribute('src','svg/sun.svg')
+    document.getElementById('night-mode-icon').setAttribute('src','../svg/sun.svg')
 }
 
 function switchDownload() {
     if (currentMode) {
         document.getElementById("download-button-mobile").setAttribute("download","dompetriella-resume-dark.pdf");
-        document.getElementById("download-button-mobile").setAttribute("href","dl-files/resume-dark.pdf");
+        document.getElementById("download-button-mobile").setAttribute("href","../dl-files/resume-dark.pdf");
     }
 
     else {
         document.getElementById("download-button-mobile").setAttribute("download","dompetriella-resume-light.pdf");
-        document.getElementById("download-button-mobile").setAttribute("href","dl-files/resume-light.pdf");
+        document.getElementById("download-button-mobile").setAttribute("href","../dl-files/resume-light.pdf");
     }
 }

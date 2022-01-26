@@ -2,19 +2,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <head>
-    <title>dompetriella - Code</title>
-	<link rel="stylesheet" href="main.css">
-	<link rel="stylesheet" href="code.css">
+    <title>dompetriella - Contact</title>
+	<link rel="stylesheet" href="../main.css">
+	<link rel="stylesheet" href="../styles/contact.css">
 </head>
 
-<body id="projects">
+<body id="contact">
 
 	<div class="nav-flex-container">
 		<nav class="navbar">
 			<ul class="navbar-nav">
 				
 				<li class="nav-item">
-					<a href="index.html" class="nav-link home-icon">
+					<a href="../index.html" class="nav-link home-icon">
 						<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-home">
                             <g class="fa-group">
                                 <path fill="currentColor" d="M352 496V368a16 16 0 0 0-16-16h-96a16 16 0 0 0-16 16v128a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V311.07c1.78-1.21 3.85-1.89 5.47-3.35L288 115l218.74 192.9c1.54 1.38 3.56 2 5.26 3.2V496a16 16 0 0 1-16 16H368a16 16 0 0 1-16-16z" class="fa-secondary"></path>
@@ -65,33 +65,43 @@
 		</nav>
 	</div>
 
-	<main>
-        <a class="back-to-projects" href="projects.html">Back to Projects</a>
-        <h1 class="sub-projects-title sub-projects-code">Code Projects</h1>
-        <div class="code-projects-container-links">
-            <div class="code-projects-item-area">
-                <a class="code-item" href="https://github.com/dompetriella">
-                    <img class="image-icon" src="icons/githublogo.png" />
-                    Github
-                </a>
-                <a class="code-item" href="https://replit.com/@dompetriella">
-                    <img class="image-icon" src="icons/replitlogo.png" />
-                    Replit
-                </a>
+	<main class="contact-main">
+		<div class="header">
+			<h2>Like what you see?</h2>
+			<h3 style="text-align: center;">Check out my resumé and feel free to get in touch below!</h3>
+		</div>
+
+        <div class="contact-content">
+
+            <div class="resume-area">
+                <a href="resume.html" class="contact-link resume">Resumé</a>
+                <!-- <a href="CV.html" class="contact-link cv">CV</a> -->
             </div>
-        </div>
 
-            <div class="code-projects-container">
-                <div class="code-projects-item-area tertiary-color">Web Apps</div>
-                <div class="code-projects-player-area flex-row">
+            <div class="contact-form-container">
+                <form action="https://formsubmit.co/0d8f9f07f9f1cdb19181d6a019cb227d" method="POST" />
 
-                    <div class="code-projects-item-area">
-                        <a class="code-item maritime-mines" href="https://maritime-mines.dompetriella.repl.co/">Maritime Mines</a>
+                    <input type="hidden" name="_subject" value="New Email from Personal Website">
+
+                    <div class="line-input name-form">
+                        <input name="Name" type="text" class="contact-input name-input" placeholder="Your Name" required>
                     </div>
-
-                </div>
+        
+                    <div class="line-input email-address-form">
+                        <input name="Email" type="email" class="contact-input email-input" placeholder="Your Email" required>
+                    </div>
+        
+                    <div class="message-form">
+                        <textarea name="Message" class="message-input" placeholder="Write your message here" rows="5" required></textarea>
+                    </div>
+        
+                    <div class="submit-button">
+                        <input type="submit" class="sub-button" value="SEND">
+                    </div>
+                </form>
             </div>
         </div>
-
 	</main>
 </body>
+<script src="../script.js"></script>
+
